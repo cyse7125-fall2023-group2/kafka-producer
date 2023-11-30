@@ -9,11 +9,11 @@ async function publishToKafka(result) {
     brokers: [process.env.BROKER_ENDPOINT],
   // brokers: ["localhost:9092"],
     logLevel: logLevel.INFO,
-    sasl: {
-      mechanism: 'plain', // scram-sha-256 or scram-sha-512
-      username: process.env.SASL_USERNAME,
-      password: process.env.SASL_PASSWORD
-    }
+    // sasl: {
+    //   mechanism: 'plain', // scram-sha-256 or scram-sha-512
+    //   username: process.env.SASL_USERNAME,
+    //   password: process.env.SASL_PASSWORD
+    // }
   });
   // kcat -C -b "my-kafka-controller-0.my-kafka-controller-headless.default.svc.cluster.local:9092" -t health-check-topic -o beginning
 
