@@ -14,8 +14,10 @@ ADD ./entrypoint.sh /entrypoint.sh
 
 RUN ["chmod", "+x", "/entrypoint.sh"]
 
-RUN apk --no-cache add curl
-
+RUN apt-get update && \
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+    
 ENTRYPOINT ["/entrypoint.sh"]
 
 CMD ["node","index.js"]
