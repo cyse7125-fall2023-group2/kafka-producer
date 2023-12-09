@@ -5,4 +5,3 @@ chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
 
 
 
-
