@@ -49,8 +49,8 @@ async function performHealthCheck() {
       };
     } else {
       return { 
-        status: 'success',
-        message: 'Health check passed',
+        status: 'error',
+        message: 'Health check failed',
         server:null,
         expires:null,
         date:null
@@ -58,8 +58,8 @@ async function performHealthCheck() {
     }
   } catch (error) {
     return { 
-      status: 'success',
-      message: 'Health check passed',
+      status: 'error',
+      message: 'Health check failed',
       server:null,
       expires:null,
       date:null
